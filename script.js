@@ -1,3 +1,23 @@
+// Header manage 
+let menuBar=document.querySelectorAll(".menu a");
+let sections=document.querySelectorAll("section");
+
+menuBar.forEach(btn=> {
+    btn.addEventListener('click', ()=>{
+        menuBar.forEach(btn=>{
+            btn.classList.remove('menuActive');
+        });
+        btn.classList.add('menuActive');
+        sections.forEach(value =>{
+            value.classList.remove('active');
+        })
+        let txt="."+btn.innerText; txt=txt.toLowerCase();
+        console.log(txt);
+        document.querySelector(txt).classList.add('active');
+    });
+});
+
+// Skills Section 
 let resumeBtn=document.querySelectorAll(".resume button");
 let resumeContentBox=document.querySelectorAll(".resumeContentBox");
 
@@ -13,4 +33,55 @@ resumeBtn.forEach(btn=> {
         let txt=".resumeContentBox"+btn.innerText;
         document.querySelector(txt).classList.add('resumeActive');
     });
+});
+
+// work img slider
+let imgSliderLeftBtn=document.querySelectorAll(".workImgSliderControl button")[0];
+let imgSliderRightBtn=document.querySelectorAll(".workImgSliderControl button")[1];
+let sliderLength=document.querySelectorAll(".workImgSlider .imgItem").length - 1;
+
+let workTxtBox=document.querySelectorAll(".workTxtBox");
+
+let workImgSlider=document.querySelector(".workImgSlider");
+let sliderIdx=0;
+
+let sliderFunc=()=>{
+    workImgSlider.style.transform= `translateX(calc(${sliderIdx * -100}% - ${sliderIdx*2}rem))`;
+    workTxtBox.forEach(val=>{
+        val.classList.remove("workActive");
+    });
+    document.querySelector(`.workTxtBox${sliderIdx+1}`).classList.add("workActive");
+    if(sliderIdx>0){
+        imgSliderLeftBtn.classList.remove("disableBtn");
+    }
+    else{
+        imgSliderLeftBtn.classList.add("disableBtn");
+    }
+    
+    if(sliderIdx<sliderLength){
+        imgSliderRightBtn.classList.remove("disableBtn");
+    }
+    else{
+        imgSliderRightBtn.classList.add("disableBtn");
+    }
+}
+
+imgSliderLeftBtn.addEventListener('click',()=>{
+    if(sliderIdx>0){
+        sliderIdx--;
+        sliderFunc();
+    }
+    else{
+        sliderIdx=0;
+        sliderFunc();
+    }
+});
+imgSliderRightBtn.addEventListener('click',()=>{
+    if(sliderIdx<sliderLength){
+        sliderIdx++;
+        sliderFunc();
+    }
+    else{
+        sliderIdx=sliderLength;
+    }
 });

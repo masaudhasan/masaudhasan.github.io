@@ -61,6 +61,7 @@ header{
 }
 .menu a:hover{
     color: var(--defaultColor);
+    cursor: pointer;
 }
 
 #menuIcon{
@@ -74,7 +75,7 @@ section{
     position: absolute;
     height: 100vh;
     width: 100%;
-    padding: 10rem 11% 2rem;
+    padding: 13rem 11% 2rem;
     background-color: var(--bgColor);
     visibility: hidden;
     opacity: 0;
@@ -86,9 +87,13 @@ section.active{
     overflow: auto;
 }
 .home{
+    
+}
+.homeContainer{
+    width: 100%;
     display: flex;
     align-items: center;
-    gap: 5rem;
+    justify-content: space-between;
 }
 .home h1{
     color:var(--txtColor);
@@ -147,8 +152,8 @@ section.active{
 
 
 .home .homeImg .imgBox{
-    height: 32vw;
-    width: 32vw;
+    height: 31vw;
+    width: 31vw;
     border-radius: 50%;
     padding: 0.5rem;
     position: relative;
@@ -177,8 +182,8 @@ section.active{
 }
 .home .homeImg .imgBox::after{
     content: "";
-    width: 32vw;
-    height: 32vw;
+    width: 31vw;
+    height: 31vw;
     position:absolute;
     top:0;
     left:0;
@@ -189,8 +194,8 @@ section.active{
 }
 .home .homeImg .imgBox::before{
     content: "";
-    width: 32vw;
-    height: 32vw;
+    width: 31vw;
+    height: 31vw;
     position:absolute;
     top:0;
     left:0;
@@ -231,6 +236,7 @@ section.active{
     display: flex;
     justify-content: space-between;
     color: var(--txtColor);
+    padding-top: 13rem;
 }
 .resumeBtnBox{
     width: 32%;
@@ -341,4 +347,279 @@ section.active{
 .resumeContent:hover::-webkit-scrollbar-thumb{
     background-color: var(--defaultColor);
 
+}
+.resume .resumeContentBoxSkills .resumeContent{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(14rem, 1fr));
+    overflow: visible;
+    height: auto;
+}
+.resume .resumeContentBoxSkills .resumeContent .skillsBox{
+    background-color: var(--secondBgColor);
+    position: relative;
+    height: calc((35rem - 3rem) / 3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0.5rem;
+}
+.resume .resumeContentBoxSkills .resumeContent .skillsBox i{
+    font-size: 7rem;
+}
+.resume .resumeContentBoxSkills .resumeContent .skillsBox span{
+    position: absolute;
+    top:-20%;
+    z-index: 1;
+    padding: 0.5rem 1rem;
+    font-size: 1.3rem;
+    border-radius: 0.5rem;
+    background-color:white;
+    color: var(--bgColor);
+    pointer-events: none;
+    opacity: 0;
+    transform: scale(0.8);
+    transition: 0.5s;
+}
+.resume .resumeContentBoxSkills .resumeContent .skillsBox:hover > i{
+    color: var(--defaultColor);
+} 
+.resume .resumeContentBoxSkills .resumeContent .skillsBox:hover span{
+    opacity: 1;
+    transform: scale(1);
+}
+
+
+.resumeContentBoxAbout .resumeContent{
+    height: auto;
+}
+.resumeContentBoxAbout .resumeContent .aboutDetails{
+    display: flex;
+    align-items: center;
+    font-size: 1.8rem;
+    height: calc((35rem - 3rem) / 7);
+    color: var(--defaultColor);
+}
+.resumeContentBoxAbout .resumeContent .aboutDetails span{
+    color: var(--txtColor);
+}
+
+/* Work Section  */
+.work .workContainer{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    color: var(--txtColor);
+
+}
+.work .workContainer .workTxtBox{
+    display: none;
+}
+.work .workContainer .workTxtBox.workActive{
+    display: block;
+    width: 45%;
+}
+.work .workContainer .workTxtBox h1{
+    font-size: 7rem;
+    color: var(--bgColor);
+    -webkit-text-stroke: 0.07rem var(--txtColor);
+}
+.work .workContainer .workTxtBox h3{
+    font-size: 3.2rem;
+    margin: 1rem 0;
+}
+.work .workContainer .workTxtBox .workDetails{
+    font-size: 1.5rem;
+    line-height: 2.7rem;
+    margin: 0.7rem 0 2rem 0;
+}
+.work .workContainer .workTxtBox .tech{
+    font-size: 1.6rem;
+    color: var(--defaultColor);
+    padding-bottom: 1.6rem;
+    border-bottom: 0.2rem solid var(--txtColor);
+    margin-bottom: 2rem;
+}
+.work .workContainer .workTxtBox .link a{
+    font-size: 3rem;
+    font-weight: 300;
+    position: relative;
+    display: inline-flex;
+    padding: 0.9rem;
+    color: var(--txtColor);
+    background-color: var(--secondBgColor);
+    border-radius: 50%;
+}
+.work .workContainer .workTxtBox .link a:first-child{
+    margin-right: 1.3rem;
+}
+.work .workContainer .workTxtBox .link a:first-child i{
+    transform: rotate(135deg);
+    transition: 0.4s;
+}
+.work .workContainer .workTxtBox .link a span{
+    position: absolute;
+    top: -50%;
+    left: 50%;
+    transform: translate(-50%) scale(0.8);
+    border-radius: 0.7rem;
+    font-size: 1.4rem;
+    padding:0.3rem 0.8rem;
+    white-space: nowrap;
+    pointer-events: none;
+    background-color: white;
+    color: var(--bgColor);
+    opacity: 0;
+    transition: 0.3s;
+}
+.work .workContainer .workTxtBox .link a:hover > span{
+    opacity: 1;
+    top: -55%;
+    transform:translate(-50%) scale(0.9);
+}
+.work .workContainer .workTxtBox .link a:hover{
+    color: var(--defaultColor);
+}
+.work .workContainer .workTxtBox .link a:first-child:hover > i{
+    transform: rotate(180deg);
+}
+.work .workContainer .workImgBox{
+    width: 50%;
+}
+.work .workContainer .workImgBox .workImgContainer{
+    width: 100%;
+    height: 40rem;
+    border-radius: 1rem;
+    overflow: hidden;
+}
+.workImgBox .workImgContainer .workImgSlider{
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: 100%;
+    gap: 2rem;
+    height: inherit;
+    transition: 0.4s;
+}
+.workImgBox .workImgContainer .imgItem{
+    height: inherit;
+}
+.work .workContainer .workImgBox .workImgContainer .imgItem img{
+    display: block;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 1rem;
+}
+.workImgSliderControl{
+    text-align: right;
+    margin-top: 1.5rem;
+}
+.workImgSliderControl button{
+    font-size: 3rem;
+    font-weight: 200;
+    padding: .2rem .32rem;
+    /* border: 0.2rem solid var(--defaultColor); */
+    color: var(--bgColor);
+    background-color: var(--defaultColor);
+    border-radius: .8rem;
+    transition: 0.3s;
+}
+.workImgSliderControl button:last-child{
+    margin-left: 1.5rem;
+}
+.workImgSliderControl button:hover{
+    cursor: pointer;
+}
+.workImgSliderControl button:active{
+    background-color: transparent;
+    color: var(--defaultColor);
+}
+.workImgSliderControl .disableBtn{
+    background-color: var(--secondBgColor);
+    color: var(--txtColor);
+}
+
+/* Contact Section  */
+.contact{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 10rem;
+}
+.contactBox{
+    width: 46%;
+    background-color: var(--secondBgColor);
+    border-radius: .8rem;
+    padding: 2rem;
+}
+.contactBox h1{
+    font-size: 3rem;
+    color: var(--defaultColor);
+    margin-bottom: 2rem;
+}
+.contactBox p{
+    font-size: 1.4rem;
+    line-height: 2.5rem;
+    color: var(--txtColor);
+    margin-bottom: 2rem;
+}
+.contactBox .formField{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+}
+.contactBox .formField .contactSubject, .formField textarea{
+    grid-column: 1 / -1;
+}
+.contactBox .formField input, .contactBox .formField textarea{
+    padding: 0.8rem;
+    background-color: var(--bgColor);
+    color:var(--txtColor);
+    font-size: 1.3rem;
+    border-radius: 0.2rem;
+    border: 0.15rem solid var(--bgColor);
+}
+.contactBox .formField textarea{
+    height: 13rem;
+    margin-bottom: 1.5rem;
+    resize: none;
+}
+.contactBox .formField input:focus, .contactBox .formField textarea:focus{
+    border-color: var(--defaultColor);
+}
+.contact form button{
+    padding: .9rem 2rem;
+    border-radius: 2rem;
+    background-color: var(--defaultColor);
+}
+.contact form button:hover{
+    cursor: pointer;
+    background-color: var(--hoverColor);
+}
+
+.contactDetailsBox{
+    width: 45%;
+    height: 50rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.contactDetailsBox .contactDetails{
+    display: flex;
+    align-items: center;
+    margin: 1.5rem 0;
+    color: var(--txtColor);
+}
+.contactDetails i{
+    font-size: 2.5rem;
+    padding: 0.9rem;
+    background-color: var(--secondBgColor);
+    color:var(--defaultColor);
+    margin-right: 2rem;
+}
+.contactDetails .contactDetailsTxt p{
+    font-size: 1.2rem;
+    font-weight: 300;
+}
+.contactDetails .contactDetailsTxt h3{
+    font-weight: 300;
+    font-size: 1.6rem;
 }
