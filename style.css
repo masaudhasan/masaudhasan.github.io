@@ -31,7 +31,7 @@ header{
     background-color: var(--bgColor);
     justify-content: space-between;
     align-items: center;
-    padding:1.7rem 11%;
+    padding:1.7rem 13%;
     z-index: 1000;
 }
 .logo{
@@ -75,7 +75,7 @@ section{
     position: absolute;
     height: 100vh;
     width: 100%;
-    padding: 13rem 11% 2rem;
+    padding: 13rem 13% 2rem;
     background-color: var(--bgColor);
     visibility: hidden;
     opacity: 0;
@@ -109,8 +109,9 @@ section.active{
 .homeTxt p{
     margin: 2rem 0 4rem;
     color: var(--txtColor);
-    font-size: 1.5rem;
-    line-height: 3.1rem;
+    font-size: 1.6rem;
+    line-height: 2.8rem;
+    text-align: justify;
 }
 .home .homeTxtBtn{
     width: 100%;
@@ -236,10 +237,9 @@ section.active{
     display: flex;
     justify-content: space-between;
     color: var(--txtColor);
-    padding-top: 13rem;
 }
 .resumeBtnBox{
-    width: 32%;
+    width: 31%;
 }
 .resumeBtnBox h2{
     font-size: 3.2rem;
@@ -276,33 +276,36 @@ section.active{
 }
 .resumeContentBox{
     display: none;
-    width: 62%;
+    width: 60%;
 }
 .resumeContentBox.resumeActive{
     display: block;
 }
 .resumeContentBox h2{
     font-size: 2.7rem;
-    margin-bottom: 1.3rem;
+    margin-bottom: 1rem;
 }
 .resumeContentBox .resumeContentBoxTxt{
     font-size: 1.45rem;
-    line-height: 2.5rem;
-    margin-bottom: 2rem;
+    line-height: 2.4rem;
+    margin-bottom: 1.7rem;
 }
 
 .resumeContentBox .resumeContent{
     display: grid;
     grid-template-columns: repeat(auto-fit,minmax(28rem, 1fr));
-    height: 35rem;
+    height: 33rem;
     gap: 1.5rem;
     overflow: auto;
 }
 .resumeContent .resumeContentDetails{
     background-color: var(--secondBgColor);
-    height: calc((35rem - 1.5rem) / 2);
+    height: calc((33rem - 1.5rem) / 2);
     border-radius: 0.8rem;
-    padding: 1.5rem 0 0.5rem 1.5rem;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 
@@ -312,14 +315,14 @@ section.active{
     margin-bottom: 0.3rem;
 }
 .resumeContent .resumeContentDetails h3{
-    font-size: 1.8rem;
+    font-size: 1.7rem;
     margin-bottom: 0.2rem;
 }
 .resumeContent .resumeContentDetails .company{
     position: relative;
-    font-size: 1.5rem;
+    font-size: 1.45rem;
     font-weight: 400;
-    margin-bottom: 1rem;
+    margin-bottom: .8rem;
     margin-left: 1.2rem;
 }
 .resumeContent .resumeContentDetails .company::before{
@@ -335,6 +338,7 @@ section.active{
 .resumeContent .resumeContentDetails .contentDetailsTxt{
     font-size: 1.25rem;
     font-weight: 200;
+    text-align:justify;
 }
 
 .resumeContent::-webkit-scrollbar{
