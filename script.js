@@ -1,6 +1,10 @@
 // Header manage 
 let menuBar=document.querySelectorAll(".menu a");
 let sections=document.querySelectorAll("section");
+let logo=document.querySelector(".logo");
+
+let navLogo=document.querySelector("#menuIcon");
+let responsiveNav=document.querySelector("header .menu");
 
 menuBar.forEach(btn=> {
     btn.addEventListener('click', ()=>{
@@ -14,9 +18,28 @@ menuBar.forEach(btn=> {
         let txt="."+btn.innerText; txt=txt.toLowerCase();
         console.log(txt);
         document.querySelector(txt).classList.add('active');
+
+        navLogo.classList.remove("bx-x");
+    responsiveNav.classList.remove("menuBarActive");
     });
 });
+logo.addEventListener('click', ()=>{
+    menuBar.forEach(btn=>{
+        btn.classList.remove('menuActive');
+    });
+    menuBar[0].classList.add('menuActive');
+    sections.forEach(value =>{
+        value.classList.remove('active');
+    });
+    document.querySelector(".home").classList.add('active');
+});
 
+// Responsive Navbar 
+
+navLogo.addEventListener('click',()=>{
+    navLogo.classList.toggle("bx-x");
+    responsiveNav.classList.toggle("menuBarActive");
+});
 // Skills Section 
 let resumeBtn=document.querySelectorAll(".resume button");
 let resumeContentBox=document.querySelectorAll(".resumeContentBox");
