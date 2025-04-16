@@ -1,3 +1,56 @@
+// Webpage Landing Effects and Animation
+
+const styl=document.createElement('style');
+styl.innerHTML=`
+    @keyframes enterTtB{
+    0%{
+        opacity: 0;
+        transform: translateY(-2rem);
+    }
+    85%{
+        transform: translateY(0rem);
+    }
+    100%{
+        opacity: 1;
+    }
+}
+@keyframes enterBtT{
+    0%{
+        opacity: 0;
+        transform: translateY(2rem);
+    }
+    85%{
+        transform: translateY(0rem);
+    }
+    100%{
+        opacity: 1;
+    }
+}
+@keyframes enterLtR{
+    0%{
+        opacity: 0;
+        transform: translateX(-2rem);
+    }
+    85%{
+        transform: translateX(0rem);
+    }
+    100%{
+        opacity: 1;
+    }
+}
+@keyframes enterRtL{
+    0%{
+        opacity: 0;
+        transform: translateX(2rem);
+    }
+    85%{
+        transform: translateX(0rem);
+    }
+    100%{
+        opacity: 1;
+    }
+}`;
+document.head.appendChild(styl);
 // Header manage 
 let menuBar=document.querySelectorAll(".menu a");
 let sections=document.querySelectorAll("section");
@@ -8,6 +61,7 @@ let responsiveNav=document.querySelector("header .menu");
 
 menuBar.forEach(btn=> {
     btn.addEventListener('click', ()=>{
+        styl.remove();
         menuBar.forEach(btn=>{
             btn.classList.remove('menuActive');
         });
@@ -16,14 +70,24 @@ menuBar.forEach(btn=> {
             value.classList.remove('active');
         })
         let txt="."+btn.innerText; txt=txt.toLowerCase();
-        console.log(txt);
         document.querySelector(txt).classList.add('active');
 
         navLogo.classList.remove("bx-x");
-    responsiveNav.classList.remove("menuBarActive");
+        if(navLogo.classList.contains("bx-x")){
+            responsiveNav.classList.add("menuBarActive");
+        }
+        else{
+            responsiveNav.classList.add("menuOutAnimate");
+            setTimeout(()=>{
+                responsiveNav.classList.remove("menuBarActive");
+                responsiveNav.classList.remove("menuOutAnimate");
+            },400);
+        }
+        document.head.appendChild(styl);
     });
 });
 logo.addEventListener('click', ()=>{
+    styl.remove();
     menuBar.forEach(btn=>{
         btn.classList.remove('menuActive');
     });
@@ -31,14 +95,43 @@ logo.addEventListener('click', ()=>{
     sections.forEach(value =>{
         value.classList.remove('active');
     });
+    
     document.querySelector(".home").classList.add('active');
+
+    navLogo.classList.remove("bx-x");
+    if(navLogo.classList.contains("bx-x")){
+        responsiveNav.classList.add("menuBarActive");
+    }
+    else{
+        responsiveNav.classList.add("menuOutAnimate");
+        setTimeout(()=>{
+            responsiveNav.classList.remove("menuBarActive");
+            responsiveNav.classList.remove("menuOutAnimate");
+        },400);
+    }
+    setTimeout(()=>{
+        document.head.appendChild(styl);
+    },0);
 });
 
 // Responsive Navbar 
 
 navLogo.addEventListener('click',()=>{
     navLogo.classList.toggle("bx-x");
-    responsiveNav.classList.toggle("menuBarActive");
+    // navLogo.classList.add("menuIconAnimate");
+    if(navLogo.classList.contains("bx-x")){
+        responsiveNav.classList.add("menuBarActive");
+    }
+    else{
+        responsiveNav.classList.add("menuOutAnimate");
+        setTimeout(()=>{
+            responsiveNav.classList.remove("menuBarActive");
+            responsiveNav.classList.remove("menuOutAnimate");
+        },500);
+    }
+    // setTimeout(()=>{
+    //     navLogo.classList.remove("menuIconAnimate");
+    // }, 500);
 });
 // Skills Section 
 let resumeBtn=document.querySelectorAll(".resume button");
