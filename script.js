@@ -133,7 +133,7 @@ navLogo.addEventListener('click',()=>{
     //     navLogo.classList.remove("menuIconAnimate");
     // }, 500);
 });
-// Skills Section 
+// Resume Section 
 let resumeBtn=document.querySelectorAll(".resume button");
 let resumeContentBox=document.querySelectorAll(".resumeContentBox");
 

@@ -113,7 +113,7 @@ section.active{
     font-weight: 500;
     opacity: 0;
     animation: enterTtB .4s ease 1 forwards;
-    animation-delay: calc(0.3s * var(--i));
+    animation-delay: calc(0.2s * var(--i));
 }
 .home .homeTxt h1:nth-child(2){
     color: var(--defaultColor);
@@ -129,7 +129,7 @@ section.active{
     text-align: justify;
     opacity: 0;
     animation: enterTtB .4s ease 1 forwards;
-    animation-delay: calc(0.3s * var(--i));
+    animation-delay: calc(0.2s * var(--i));
 }
 .home .homeTxtBtn{
     width: 100%;
@@ -137,13 +137,13 @@ section.active{
     align-items: center;
     opacity: 0;
     animation: enterTtB .4s ease 1 forwards;
-    animation-delay: calc(0.3s * var(--i));
+    animation-delay: calc(0.2s * var(--i));
 }
 .home .homeTxtBtn a{
     margin-right: 2rem;
     opacity: 0;
-    animation: enterLtR .4s ease 1 forwards;
-    animation-delay: calc(0.18s * var(--i));
+    animation: enterTtB .4s ease 1 forwards;
+    animation-delay: calc(0.2s * var(--i));
 }
 .homeTxt .cvBtn{
     font-size: 1.6rem;
@@ -179,8 +179,8 @@ section.active{
 .home .homeImg{
     margin-left: 2.5rem;
     opacity: 0;
-    animation: enterRtL .4s ease 1 forwards;
-    animation-delay: calc(0.3s * var(--i));
+    animation: enterTtB .4s ease 1 forwards;
+    animation-delay: 0.3s;
 }
 .home .homeImg .imgBox{
     height: 31vw;
@@ -256,10 +256,16 @@ section.active{
     justify-content: center;
     font-size: 5rem;
     color: var(--txtColor);
+    opacity: 0;
+    animation: enterTtB .4s ease 1 forwards;
+    animation-delay: calc(0.2s * var(--i));
 }
 .services h1{
     font-size: 4rem;
-    color: var(--txtColor);
+    color: var(--txtColor); 
+    opacity: 0;
+    animation: enterTtB .4s ease 1 forwards;
+    animation-delay: calc(0.2s * var(--i));
 }
 
 /* Resume Section  */
@@ -274,6 +280,9 @@ section.active{
 .resumeBtnBox h2{
     font-size: 3.2rem;
     font-weight: 600;
+    opacity: 0;
+    animation: enterTtB .4s ease 1 forwards;
+    animation-delay: calc(0.2s * var(--i));
 }
 /* .resumeBtnBox p{
     font-size: 1.4rem;
@@ -294,6 +303,9 @@ section.active{
     color: var(--txtColor);
     background-color: var(--secondBgColor);
     transition:0.2s;
+    opacity: 0;
+    animation: enterTtB .4s ease 1 forwards;
+    animation-delay: calc(0.2s * var(--i));
 }
 .resumeBtnBox .resumeBtn button:hover{
     transform: scale(1.01);
@@ -314,11 +326,17 @@ section.active{
 .resumeContentBox h2{
     font-size: 2.7rem;
     margin-bottom: 1rem;
+    opacity: 0;
+    animation: enterTtB .4s ease 1 forwards;
+    animation-delay: calc(0.2s * var(--i));
 }
 .resumeContentBox .resumeContentBoxTxt{
     font-size: 1.45rem;
     line-height: 2.4rem;
     margin-bottom: 1.7rem;
+    opacity: 0;
+    animation: enterTtB .4s ease 1 forwards;
+    animation-delay: calc(0.2s * var(--i));
 }
 
 .resumeContentBox .resumeContent{
@@ -327,6 +345,9 @@ section.active{
     height: 33rem;
     gap: 1.5rem;
     overflow: auto;
+    opacity: 0;
+    animation: enterTtB .4s ease 1 forwards;
+    animation-delay: calc(0.2s * var(--i));
 }
 .resumeContent .resumeContentDetails{
     background-color: var(--secondBgColor);
@@ -336,6 +357,9 @@ section.active{
     display: flex;
     flex-direction: column;
     justify-content: center;
+    opacity: 0;
+    animation: enterTtB .4s ease 1 forwards;
+    animation-delay: calc(0.2s * var(--i));
 }
 
 
@@ -396,6 +420,9 @@ section.active{
     align-items: center;
     justify-content: center;
     border-radius: 0.5rem;
+    opacity: 0;
+    animation: enterTtB .4s ease 1 forwards;
+    animation-delay: calc(0.2s * var(--i));
 }
 .resume .resumeContentBoxSkills .resumeContent .skillsBox i{
     font-size: 7rem;
@@ -432,6 +459,9 @@ section.active{
     font-size: 1.8rem;
     height: calc((35rem - 3rem) / 7);
     color: var(--defaultColor);
+    opacity: 0;
+    animation: enterTtB .4s ease 1 forwards;
+    animation-delay: calc(0.2s * var(--i));
 }
 .resumeContentBoxAbout .resumeContent .aboutDetails span{
     color: var(--txtColor);
@@ -445,6 +475,9 @@ section.active{
     padding-bottom: 4rem;
     margin-top: -2rem;
     display: none;
+    opacity: 0;
+    animation: enterTtB .4s ease 1 forwards;
+    animation-delay: calc(0.2s * var(--i));
 }
 .work .workContainer{
     width: 100%;
@@ -463,15 +496,24 @@ section.active{
     font-size: 7rem;
     color: var(--bgColor);
     -webkit-text-stroke: 0.07rem var(--txtColor);
+    opacity: 0;
+    animation: enterTtB .4s ease 1 forwards;
+    animation-delay: calc(0.2s * var(--i));
 }
 .work .workContainer .workTxtBox h3{
     font-size: 3.2rem;
     margin: 1rem 0;
+    opacity: 0;
+    animation: enterTtB .4s ease 1 forwards;
+    animation-delay: calc(0.2s * var(--i));
 }
 .work .workContainer .workTxtBox .workDetails{
     font-size: 1.5rem;
     line-height: 2.7rem;
     margin: 0.7rem 0 2rem 0;
+    opacity: 0;
+    animation: enterTtB .4s ease 1 forwards;
+    animation-delay: calc(0.2s * var(--i));
 }
 .work .workContainer .workTxtBox .tech{
     font-size: 1.6rem;
@@ -479,6 +521,9 @@ section.active{
     padding-bottom: 1.6rem;
     border-bottom: 0.2rem solid var(--txtColor);
     margin-bottom: 2rem;
+    opacity: 0;
+    animation: enterTtB .4s ease 1 forwards;
+    animation-delay: calc(0.2s * var(--i));
 }
 .work .workContainer .workTxtBox .link a{
     font-size: 3rem;
@@ -489,6 +534,9 @@ section.active{
     color: var(--txtColor);
     background-color: var(--secondBgColor);
     border-radius: 50%;
+    opacity: 0;
+    animation: enterTtB .4s ease 1 forwards;
+    animation-delay: calc(0.2s * var(--i));
 }
 .work .workContainer .workTxtBox .link a:first-child{
     margin-right: 1.3rem;
@@ -531,6 +579,9 @@ section.active{
     height: 40rem;
     border-radius: 1rem;
     overflow: hidden;
+    opacity: 0;
+    animation: enterTtB .4s ease 1 forwards;
+    animation-delay: calc(0.2s * var(--i));
 }
 .workImgBox .workImgContainer .workImgSlider{
     display: grid;
@@ -563,6 +614,9 @@ section.active{
     background-color: var(--defaultColor);
     border-radius: .8rem;
     transition: 0.3s;
+    opacity: 0;
+    animation: enterTtB .4s ease 1 forwards;
+    animation-delay: calc(0.2s * var(--i));
 }
 .workImgSliderControl button:last-child{
     margin-left: 1.5rem;
@@ -591,17 +645,26 @@ section.active{
     background-color: var(--secondBgColor);
     border-radius: .8rem;
     padding: 2rem;
+    opacity: 0;
+    animation: enterTtB .4s ease 1 forwards;
+    animation-delay: calc(0.2s * var(--i));
 }
 .contactBox h1{
     font-size: 3rem;
     color: var(--defaultColor);
     margin-bottom: 2rem;
+    opacity: 0;
+    animation: enterTtB .4s ease 1 forwards;
+    animation-delay: calc(0.2s * var(--i));
 }
 .contactBox p{
     font-size: 1.4rem;
     line-height: 2.5rem;
     color: var(--txtColor);
     margin-bottom: 2rem;
+    opacity: 0;
+    animation: enterTtB .4s ease 1 forwards;
+    animation-delay: calc(0.2s * var(--i));
 }
 .contactBox .formField{
     display: grid;
@@ -618,6 +681,9 @@ section.active{
     font-size: 1.3rem;
     border-radius: 0.2rem;
     border: 0.15rem solid var(--bgColor);
+    opacity: 0;
+    animation: enterTtB .4s ease 1 forwards;
+    animation-delay: calc(0.2s * var(--i));
 }
 .contactBox .formField textarea{
     height: 13rem;
@@ -631,6 +697,9 @@ section.active{
     padding: .9rem 2rem;
     border-radius: 2rem;
     background-color: var(--defaultColor);
+    opacity: 0;
+    animation: enterTtB .4s ease 1 forwards;
+    animation-delay: calc(0.2s * var(--i));
 }
 .contact form button:hover{
     cursor: pointer;
@@ -649,6 +718,9 @@ section.active{
     align-items: center;
     margin: 1.5rem 0;
     color: var(--txtColor);
+    opacity: 0;
+    animation: enterTtB .4s ease 1 forwards;
+    animation-delay: calc(0.2s * var(--i));
 }
 .contactDetails i{
     font-size: 2.5rem;
