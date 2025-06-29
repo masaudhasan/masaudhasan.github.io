@@ -166,7 +166,7 @@ let sliderFunc=()=>{
     workTxtBox.forEach(val=>{
         val.classList.remove("workActive");
     });
-    document.querySelector(`.workTxtBox${sliderIdx+1}`).classList.add("workActive");
+    document.querySelector(`.workTxtBox${sliderLength-sliderIdx+1}`).classList.add("workActive");
     if(sliderIdx>0){
         imgSliderLeftBtn.classList.remove("disableBtn");
     }
